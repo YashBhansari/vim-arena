@@ -1,6 +1,6 @@
 {
-    "name": "template-vite-ts",
-    "description": "A Phaser 3 TypeScript template using Vite.",
+    "name": "vim-tower-defense",
+    "description": "A tower defense game where the arena is a Vim-like text editor.",
     "version": "1.4.0",
     "repository": {
         "type": "git",
