@@ -1,19 +1,18 @@
 export class GameState {
     public kills: number = 0;
+    public credits: number = 0;
     public elapsedSeconds: number = 0;
     public isGameOver: boolean = false;
     public towerCount: number = 0;
-
     public onKillsChange?: (kills: number) => void;
+    public onCreditsChange?: (credits: number) => void;
     public onGameOver?: () => void;
     public onTowerCountChange?: (count: number) => void;
 
-    constructor() {
-        // No more player lives - game ends when all towers are destroyed
-    }
+    constructor() {}
 
     get difficulty(): number {
-        return 1 + this.elapsedSeconds / 20;
+        return 1 + Math.sqrt(this.elapsedSeconds / 10) + (this.kills / 15);
     }
 
     get difficultyLabel(): string {
@@ -40,7 +39,18 @@ export class GameState {
 
     addKill(): void {
         this.kills += 1;
+        this.credits += 1;
         this.onKillsChange?.(this.kills);
+        this.onCreditsChange?.(this.credits);
+    }
+
+    spendCredits(amount: number): boolean {
+        if (this.credits >= amount) {
+            this.credits -= amount;
+            this.onCreditsChange?.(this.credits);
+            return true;
+        }
+        return false;
     }
 
     getTimeString(): string {

@@ -3,16 +3,15 @@ export interface TowerType {
     readonly name: string;
     readonly maxHp: number;
     readonly damage: number;
-    readonly range: number;           // pixels
-    readonly fireRate: number;        // shots per second
-    readonly projectileSpeed: number; // px per second
-    readonly color: number;           // hex tint for HP bar
-    readonly scoreValue: number;      // score per enemy kill
-    readonly pattern: string[];       // multi-character pattern
-    readonly isWall?: boolean;        // true if this is just an environmental wall
+    readonly range: number;
+    readonly fireRate: number;
+    readonly projectileSpeed: number;
+    readonly color: number;
+    readonly scoreValue: number;
+    readonly pattern: string[];
+    readonly isWall?: boolean;
 }
 
-// Tower patterns based on the provided image
 export const TOWER_TYPES: Record<string, TowerType> = {
     'sniper': {
         char: '#',
@@ -20,7 +19,7 @@ export const TOWER_TYPES: Record<string, TowerType> = {
         maxHp: 3,
         damage: 1,
         range: 400,
-        fireRate: 0.5,        // slow
+        fireRate: 0.5,
         projectileSpeed: 600,
         color: 0x00aaff,
         scoreValue: 10,
@@ -36,7 +35,7 @@ export const TOWER_TYPES: Record<string, TowerType> = {
         maxHp: 3,
         damage: 1,
         range: 120,
-        fireRate: 2.0,        // fast
+        fireRate: 2.0,
         projectileSpeed: 400,
         color: 0xff8800,
         scoreValue: 10,
