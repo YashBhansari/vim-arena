@@ -1,10 +1,10 @@
-# Vim Tower Defense
+# VimArena - A Tower Defense Game
 
-A unique tower defense game where the battlefield is a Vim-like text editor. Built with [Phaser 3](https://phaser.io/) and TypeScript.
+A tower defense game where the battlefield is a Vim-like text editor. Built with [Phaser 3](https://phaser.io/) and TypeScript.
 
 ## Concept
 
-In this game, you don't just click to place towers—you use real Vim motions! 
+In this game, you don't just click to place towers—you use Vim motions! 
 - **The Arena:** The game board is a text editor. Different file types serve as different arenas.
 - **The Mechanics:** Navigate using standard Vim motions (like `h`, `j`, `k`, `l`, `w`, `b`). 
 - **The Goal:** Use characters to build defensive structures or attacking objects by leveraging Vim operators, counts, and modes (Normal and Insert) to defend against incoming threats.
