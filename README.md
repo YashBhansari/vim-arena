@@ -1,4 +1,4 @@
-# Vim Tower Defense
+# VimArena - A Tower Defense Game
 
 Vim Tower Defense is a specialized strategy game where the battlefield is a functional Vim-like text editor. Players must utilize authentic Vim motions, operators, and modes to navigate the environment, construct defenses, and survive endless waves of incoming enemies.
 
@@ -74,6 +74,3 @@ The game is built using the following technologies:
 | **Installation** | `npm install` | Installs all necessary project dependencies. |
 | **Development** | `npm run dev` | Launches the local server (typically at `http://localhost:8080`). |
 | **Build** | `npm run build` | Generates a minified, production-ready bundle in the `dist/` directory. |
-
----
-**Maintained by Yash Bhansari and Veer Mehta.**
