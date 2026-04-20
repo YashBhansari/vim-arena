@@ -63,7 +63,7 @@ export class VimEngine {
             this.triggerCursorMoved();
         } else if (event.key === 'Backspace') {
             if (this.cursorCol > 0) {
-                this.deleteText(this.cursorCol - 1, this.cursorRow, 1);
+                this.replaceChar(this.cursorCol - 1, this.cursorRow, ' ');
                 this.cursorCol--;
             }
         } else if (event.key.length === 1 && !event.ctrlKey && !event.metaKey && !event.altKey) {
